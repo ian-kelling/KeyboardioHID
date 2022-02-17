@@ -137,8 +137,8 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 #define EPTYPE_DESCRIPTOR_SIZE      unsigned int
 #define USB_DEVICE_CLASS_HUMAN_INTERFACE       0x03
 
-#define EP_TYPE_INTERRUPT_IN EPTYPE(USB_TRX_IN, USB_EP_ATTR_INT);
-#define EP_TYPE_INTERRUPT_OUT EPTYPE(USB_TRX_OUT, USB_EP_ATTR_INT);
+const uint16_t EP_TYPE_INTERRUPT_IN = EPDesc(USB_TRX_IN, USB_EP_ATTR_INT).val;
+const uint16_t EP_TYPE_INTERRUPT_OUT = EPDesc(USB_TRX_OUT, USB_EP_ATTR_INT).val;
 
 #else
 
