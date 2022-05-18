@@ -76,7 +76,8 @@ class BootKeyboard_ : public PluggableUSBModule {
 
   EPTYPE_DESCRIPTOR_SIZE epType[1];
   uint8_t protocol;
-  bool boot_protocol_{false};
+  bool boot_protocol_{true};
+//  bool boot_protocol_{false};
   uint8_t idle;
 
   uint8_t leds;
